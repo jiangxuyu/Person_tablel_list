@@ -251,7 +251,6 @@
 				TargetAttributes = {
 					7C4B45F21DA9DA32007E72C2 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = K85UXL32NF;
 						ProvisioningStyle = Automatic;
 					};
 					7C4B460B1DA9DA33007E72C2 = {
@@ -474,7 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K85UXL32NF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JiangXuYuGit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xuyu.jiang.JiangXuYuGit;
@@ -486,7 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K85UXL32NF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JiangXuYuGit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xuyu.jiang.JiangXuYuGit;

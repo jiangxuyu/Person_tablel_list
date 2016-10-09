@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) id<TableViewListProtocol> tableViewListDelegate;
 
+@property (strong, nonatomic) NSArray *rightTitleArray;  //用于跟新右侧label数据
+
 - (void)reloadData;
 
 
@@ -31,8 +33,15 @@
 - (void)setTableDataWithLeftImgArray:(NSArray *)leftImgArray withLeftTitleArray:(NSArray *)leftTitleArray withRightImgArray:(NSArray *)rightImgArray withRightTitleArray:(NSArray *)rightTitleArray;
 
 /*!
- *  以下三种方法可选择性设置，不设置的话将采用默认样式
+ *  以下几种方法可选择性设置，不设置的话将采用默认样式
  */
+//设置tableView的背景颜色
+- (void)setTableViewBackgroundColor:(UIColor *)bGColor;
+
+
+//设置cell的背景颜色
+- (void)setCellBackgroundColor:(UIColor *)bGColor;
+
 
 //设置tableView的tableHeaderView及tableFooterView
 - (void)setHeaderViewAndFooterViewWithHeaderView:(UIView *)headerView withFooterView:(UIView *)footerView;

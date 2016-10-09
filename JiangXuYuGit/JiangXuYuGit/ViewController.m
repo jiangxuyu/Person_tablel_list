@@ -47,10 +47,9 @@
 //    //自定义cell中的字体大小及颜色
 //    [tableView setCellLabelWithLeftTitleFont:[UIFont systemFontOfSize:10] withLeftTitleFontColor:[UIColor redColor] withRightTitleFont:[UIFont systemFontOfSize:10] withRightTitleFontColor:[UIColor redColor]];
     
-    str = @"big";
-    rightTiltle = @[str,@"",@"",@"",@""];
-    
-    [tableView reloadData];
+//    str = @"big";
+//    tableView.rightTitleArray = @[str,@"",@"",@"",@""];
+//    [tableView reloadData];
     
 }
 
