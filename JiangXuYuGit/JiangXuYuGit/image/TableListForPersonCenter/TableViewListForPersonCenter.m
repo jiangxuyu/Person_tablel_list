@@ -145,6 +145,10 @@
     
     if (_cell == nil) {
         _cell = [[TableListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        
+        if (indexPath.row == _propertyArray.count - 1) {
+            [_cell.separatorLine removeFromSuperview];
+        }
     }
     
     if (_setCellBGColor == YES) {

@@ -95,7 +95,6 @@
 
 - (void)setData
 {
-    _separatorLine.frame = CGRectMake(_separatorLineDistanceLeft, self.frame.size.height - 0.5, self.frame.size.width - _separatorLineDistanceRight, 0.5);
     _separatorLine.backgroundColor = _separatorLineColor;
     
     _leftImg.image = [UIImage imageNamed:self.property.leftImg];
@@ -115,6 +114,8 @@
     CGSize rightImgSize = [UIImage imageNamed:self.property.rightImg].size;
     CGSize leftTitleSize = [self.property.leftTitle sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_leftTitleFont,NSFontAttributeName, nil]];
     CGSize rightTitleSize = [self.property.rightTitle sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_rightTitleFont,NSFontAttributeName, nil]];
+    
+    _separatorLine.frame = CGRectMake(_separatorLineDistanceLeft, self.frame.size.height - 0.5, self.frame.size.width - _separatorLineDistanceRight, 0.5);
     
     if (self.property.leftImg != nil && ![self.property.leftImg isEqualToString:@""]) {
         _leftImg.frame = (CGRect){_leftDistanceX, self.frame.size.height / 2 - leftImgSize.height / 2, leftImgSize.width, leftImgSize.height};
