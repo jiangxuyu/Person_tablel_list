@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageButton : UIButton
+@interface JXYImageButton : UIButton
 
 typedef enum {
     ButtonStyleForTopImgBottomTitle = 0,      //上图下字

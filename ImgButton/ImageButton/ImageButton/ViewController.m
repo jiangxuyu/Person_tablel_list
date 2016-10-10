@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ImageButton.h"
+#import "JXYImageButton.h"
 
 @interface ViewController ()
 
@@ -25,19 +25,27 @@
 //        ButtonStyleForLeftImgRightTitle,          //左图右字
 //        ButtonStyleForRightImgLeftTitle           //左字右图
 //    }ButtonStyle;
-    ImageButton *button = [[ImageButton alloc] initButtonWithFrame:CGRectMake(100, 100, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForTopImgBottomTitle];
+    JXYImageButton *button = [[JXYImageButton alloc] initButtonWithFrame:CGRectMake(100, 100, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForTopImgBottomTitle];
+    [button addTarget:self action:@selector(doSomething) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    ImageButton *button1 = [[ImageButton alloc] initButtonWithFrame:CGRectMake(210, 100, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForTopTitleBottomImg];
+    JXYImageButton *button1 = [[JXYImageButton alloc] initButtonWithFrame:CGRectMake(210, 100, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForTopTitleBottomImg];
     [self.view addSubview:button1];
     
-    ImageButton *button2 = [[ImageButton alloc] initButtonWithFrame:CGRectMake(100, 210, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForLeftImgRightTitle];
+    JXYImageButton *button2 = [[JXYImageButton alloc] initButtonWithFrame:CGRectMake(100, 210, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForLeftImgRightTitle];
     [self.view addSubview:button2];
     
-    ImageButton *button3 = [[ImageButton alloc] initButtonWithFrame:CGRectMake(210, 210, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForRightImgLeftTitle];
+    JXYImageButton *button3 = [[JXYImageButton alloc] initButtonWithFrame:CGRectMake(210, 210, 100, 100) withImage:[UIImage imageNamed:@"ucenter_account"] withTitle:@"我的账户" withTitleTextFont:[UIFont systemFontOfSize:15] withTitleColor:[UIColor redColor] withSpaceBetweenImgAndTitle:10 withButtonStyle:ButtonStyleForRightImgLeftTitle];
     [self.view addSubview:button3];
+    
+    NSLog(@"%f",button.imageView.center.x);
+    
 }
 
+- (void)doSomething
+{
+    NSLog(@"点到了");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
