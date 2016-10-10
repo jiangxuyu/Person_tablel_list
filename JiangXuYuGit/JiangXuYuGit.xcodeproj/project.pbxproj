@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C4491281DAB3E9800BEBEF4 /* TableListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4491231DAB3E9800BEBEF4 /* TableListCell.m */; };
+		7C4491291DAB3E9800BEBEF4 /* TableListProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4491251DAB3E9800BEBEF4 /* TableListProperty.m */; };
+		7C44912A1DAB3E9800BEBEF4 /* TableViewListForPersonCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4491271DAB3E9800BEBEF4 /* TableViewListForPersonCenter.m */; };
 		7C4B45F81DA9DA32007E72C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B45F71DA9DA32007E72C2 /* main.m */; };
 		7C4B45FB1DA9DA32007E72C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B45FA1DA9DA32007E72C2 /* AppDelegate.m */; };
 		7C4B45FE1DA9DA32007E72C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B45FD1DA9DA32007E72C2 /* ViewController.m */; };
@@ -19,9 +22,6 @@
 		7C4B462F1DA9DB5A007E72C2 /* ucenter_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B462B1DA9DB5A007E72C2 /* ucenter_account@3x.png */; };
 		7C4B46301DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B462C1DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@2x.png */; };
 		7C4B46311DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B462D1DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@3x.png */; };
-		7C4B46391DA9DBA1007E72C2 /* TableListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B46341DA9DBA1007E72C2 /* TableListCell.m */; };
-		7C4B463A1DA9DBA1007E72C2 /* TableListProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B46361DA9DBA1007E72C2 /* TableListProperty.m */; };
-		7C4B463B1DA9DBA1007E72C2 /* TableViewListForPersonCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B46381DA9DBA1007E72C2 /* TableViewListForPersonCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C4491221DAB3E9800BEBEF4 /* TableListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListCell.h; sourceTree = "<group>"; };
+		7C4491231DAB3E9800BEBEF4 /* TableListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListCell.m; sourceTree = "<group>"; };
+		7C4491241DAB3E9800BEBEF4 /* TableListProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListProperty.h; sourceTree = "<group>"; };
+		7C4491251DAB3E9800BEBEF4 /* TableListProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListProperty.m; sourceTree = "<group>"; };
+		7C4491261DAB3E9800BEBEF4 /* TableViewListForPersonCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewListForPersonCenter.h; sourceTree = "<group>"; };
+		7C4491271DAB3E9800BEBEF4 /* TableViewListForPersonCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewListForPersonCenter.m; sourceTree = "<group>"; };
 		7C4B45F31DA9DA32007E72C2 /* JiangXuYuGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiangXuYuGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4B45F71DA9DA32007E72C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C4B45F91DA9DA32007E72C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,12 +68,6 @@
 		7C4B462B1DA9DB5A007E72C2 /* ucenter_account@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ucenter_account@3x.png"; sourceTree = "<group>"; };
 		7C4B462C1DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ucenter_account_balance_right_arrow@2x.png"; sourceTree = "<group>"; };
 		7C4B462D1DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ucenter_account_balance_right_arrow@3x.png"; sourceTree = "<group>"; };
-		7C4B46331DA9DBA1007E72C2 /* TableListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListCell.h; sourceTree = "<group>"; };
-		7C4B46341DA9DBA1007E72C2 /* TableListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListCell.m; sourceTree = "<group>"; };
-		7C4B46351DA9DBA1007E72C2 /* TableListProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListProperty.h; sourceTree = "<group>"; };
-		7C4B46361DA9DBA1007E72C2 /* TableListProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListProperty.m; sourceTree = "<group>"; };
-		7C4B46371DA9DBA1007E72C2 /* TableViewListForPersonCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewListForPersonCenter.h; sourceTree = "<group>"; };
-		7C4B46381DA9DBA1007E72C2 /* TableViewListForPersonCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewListForPersonCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C4491211DAB3E9800BEBEF4 /* TableListForPersonCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7C4491221DAB3E9800BEBEF4 /* TableListCell.h */,
+				7C4491231DAB3E9800BEBEF4 /* TableListCell.m */,
+				7C4491241DAB3E9800BEBEF4 /* TableListProperty.h */,
+				7C4491251DAB3E9800BEBEF4 /* TableListProperty.m */,
+				7C4491261DAB3E9800BEBEF4 /* TableViewListForPersonCenter.h */,
+				7C4491271DAB3E9800BEBEF4 /* TableViewListForPersonCenter.m */,
+			);
+			path = TableListForPersonCenter;
+			sourceTree = "<group>";
+		};
 		7C4B45EA1DA9DA32007E72C2 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +131,8 @@
 		7C4B45F51DA9DA32007E72C2 /* JiangXuYuGit */ = {
 			isa = PBXGroup;
 			children = (
+				7C4491211DAB3E9800BEBEF4 /* TableListForPersonCenter */,
 				7C4B46291DA9DB5A007E72C2 /* image */,
-				7C4B46321DA9DBA1007E72C2 /* TableListForPersonCenter */,
 				7C4B45F91DA9DA32007E72C2 /* AppDelegate.h */,
 				7C4B45FA1DA9DA32007E72C2 /* AppDelegate.m */,
 				7C4B45FC1DA9DA32007E72C2 /* ViewController.h */,
@@ -168,20 +181,6 @@
 				7C4B462D1DA9DB5A007E72C2 /* ucenter_account_balance_right_arrow@3x.png */,
 			);
 			path = image;
-			sourceTree = "<group>";
-		};
-		7C4B46321DA9DBA1007E72C2 /* TableListForPersonCenter */ = {
-			isa = PBXGroup;
-			children = (
-				7C4B46331DA9DBA1007E72C2 /* TableListCell.h */,
-				7C4B46341DA9DBA1007E72C2 /* TableListCell.m */,
-				7C4B46351DA9DBA1007E72C2 /* TableListProperty.h */,
-				7C4B46361DA9DBA1007E72C2 /* TableListProperty.m */,
-				7C4B46371DA9DBA1007E72C2 /* TableViewListForPersonCenter.h */,
-				7C4B46381DA9DBA1007E72C2 /* TableViewListForPersonCenter.m */,
-			);
-			name = TableListForPersonCenter;
-			path = image/TableListForPersonCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,11 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C4B45FE1DA9DA32007E72C2 /* ViewController.m in Sources */,
-				7C4B463B1DA9DBA1007E72C2 /* TableViewListForPersonCenter.m in Sources */,
-				7C4B463A1DA9DBA1007E72C2 /* TableListProperty.m in Sources */,
+				7C44912A1DAB3E9800BEBEF4 /* TableViewListForPersonCenter.m in Sources */,
 				7C4B45FB1DA9DA32007E72C2 /* AppDelegate.m in Sources */,
-				7C4B46391DA9DBA1007E72C2 /* TableListCell.m in Sources */,
 				7C4B45F81DA9DA32007E72C2 /* main.m in Sources */,
+				7C4491281DAB3E9800BEBEF4 /* TableListCell.m in Sources */,
+				7C4491291DAB3E9800BEBEF4 /* TableListProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +557,7 @@
 				7C4B46221DA9DA33007E72C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C4B46231DA9DA33007E72C2 /* Build configuration list for PBXNativeTarget "JiangXuYuGitTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +566,7 @@
 				7C4B46251DA9DA33007E72C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C4B46261DA9DA33007E72C2 /* Build configuration list for PBXNativeTarget "JiangXuYuGitUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +575,7 @@
 				7C4B46281DA9DA33007E72C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

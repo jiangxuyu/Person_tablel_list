@@ -29,8 +29,16 @@
     NSArray *rightTiltle = @[str,@"",@"",@"",@""];
     NSArray *leftArray = @[@"ucenter_account", @"ucenter_account", @"ucenter_account", @"ucenter_account", @"ucenter_account"];
     
+    
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     headerView.backgroundColor = [UIColor greenColor];
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
+    gradientLayer.locations = @[@0.3, @0.5, @1.0];
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1.0, 1.0);
+    gradientLayer.frame = CGRectMake(0, 0, headerView.frame.size.width, headerView.frame.size.height);
+    [headerView.layer addSublayer:gradientLayer];
     
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     footerView.backgroundColor = [UIColor greenColor];
@@ -38,9 +46,9 @@
     
     [tableView setTableDataWithLeftImgArray:leftArray withLeftTitleArray:array withRightImgArray:imgArray withRightTitleArray:rightTiltle];
     
-//    //设置tableView的tableHeaderView及tableFooterView
-//    [tableView setHeaderViewAndFooterViewWithHeaderView:headerView withFooterView:footerView];
-//    
+    //设置tableView的tableHeaderView及tableFooterView
+    [tableView setHeaderViewAndFooterViewWithHeaderView:headerView withFooterView:footerView];
+//
 //    //自定义分割线
 //    [tableView setSeparatorLineWithDistanceLeft:0 withDistanceRight:0 withColor:[UIColor redColor]];
 //    

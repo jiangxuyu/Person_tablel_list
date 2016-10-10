@@ -13,12 +13,14 @@
 @implementation TableViewListForPersonCenter
 {
     UITableView *_tableView;
+    UIColor *_tableViewBackGroundColor;
+    UIColor *_cellBackGroundColor;
+    BOOL _setCellBGColor;
     CGFloat _heightForCell;
     
     NSArray *_leftImgArray;
     NSArray *_leftTitleArray;
     NSArray *_rightImgArray;
-    NSArray *_rightTitleArray;
     
     NSMutableArray *_propertyArray;
     
@@ -42,9 +44,11 @@
 - (instancetype)initWithTableViewFrame:(CGRect)frame withHeightForCell:(CGFloat)heightForCell{
     self = [super initWithFrame:frame];
     if (self) {
-        [self createTableViewWithFrame:frame];
         _heightForCell = heightForCell;
         _propertyArray = [NSMutableArray new];
+        _tableViewBackGroundColor = [UIColor colorWithRed:237.0 / 255.0f green:239.0 / 255.0f blue:242.0 / 255.0f alpha:1];
+        
+        [self createTableViewWithFrame:frame];
     }
     return self;
 }
@@ -57,6 +61,18 @@
     _rightTitleArray = rightTitleArray;
     
     [self setProperty];
+}
+
+- (void)setTableViewBackgroundColor:(UIColor *)bGColor
+{
+    _tableViewBackGroundColor = bGColor;
+}
+
+- (void)setCellBackgroundColor:(UIColor *)bGColor
+{
+    _cellBackGroundColor = bGColor;
+    
+    _setCellBGColor = YES;
 }
 
 - (void)setHeaderViewAndFooterViewWithHeaderView:(UIView *)headerView withFooterView:(UIView *)footerView
@@ -94,7 +110,7 @@
     
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.backgroundColor = [UIColor yellowColor];
+    _tableView.backgroundColor = _tableViewBackGroundColor;
     
     [self addSubview:_tableView];
 }
@@ -129,6 +145,14 @@
     
     if (_cell == nil) {
         _cell = [[TableListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        
+        if (indexPath.row == _propertyArray.count - 1) {
+            [_cell.separatorLine removeFromSuperview];
+        }
+    }
+    
+    if (_setCellBGColor == YES) {
+        _cell.backgroundColor = _cellBackGroundColor;
     }
     
     if (_setSeparatorLine == YES) {
