@@ -20,7 +20,9 @@
 
 @property (weak, nonatomic) id<TableViewListProtocol> tableViewListDelegate;
 
-@property (strong, nonatomic) NSArray *rightTitleArray;  //用于更新右侧label的数据
+@property (strong, nonatomic) NSArray *rightTitleArray; //用于跟新右侧label数据
+
+@property (assign, nonatomic) BOOL autoDeselected;      //是否自动取消选中状态
 
 - (void)reloadData;
 

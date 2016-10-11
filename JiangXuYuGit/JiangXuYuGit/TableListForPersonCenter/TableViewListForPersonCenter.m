@@ -41,13 +41,14 @@
 }
 
 #pragma mark - 设置数据
-- (instancetype)initWithTableViewFrame:(CGRect)frame withHeightForCell:(CGFloat)heightForCell{
+- (instancetype)initWithTableViewFrame:(CGRect)frame withHeightForCell:(CGFloat)heightForCell
+{
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self)
+    {
         _heightForCell = heightForCell;
-        _propertyArray = [NSMutableArray new];
-        _tableViewBackGroundColor = [UIColor colorWithRed:237.0 / 255.0f green:239.0 / 255.0f blue:242.0 / 255.0f alpha:1];
         
+        [self initSomeVars];
         [self createTableViewWithFrame:frame];
     }
     return self;
@@ -55,9 +56,9 @@
 
 - (void)setTableDataWithLeftImgArray:(NSArray *)leftImgArray withLeftTitleArray:(NSArray *)leftTitleArray withRightImgArray:(NSArray *)rightImgArray withRightTitleArray:(NSArray *)rightTitleArray
 {
-    _leftImgArray = leftImgArray;
+    _leftImgArray   = leftImgArray;
     _leftTitleArray = leftTitleArray;
-    _rightImgArray = rightImgArray;
+    _rightImgArray  = rightImgArray;
     _rightTitleArray = rightTitleArray;
     
     [self setProperty];
@@ -71,7 +72,6 @@
 - (void)setCellBackgroundColor:(UIColor *)bGColor
 {
     _cellBackGroundColor = bGColor;
-    
     _setCellBGColor = YES;
 }
 
@@ -100,6 +100,13 @@
 }
 
 
+- (void)initSomeVars
+{
+    _propertyArray = [NSMutableArray new];
+    _tableViewBackGroundColor = [UIColor colorWithRed:237.0 / 255.0f green:239.0 / 255.0f blue:242.0 / 255.0f alpha:1];
+    _autoDeselected = YES;
+}
+
 - (void)createTableViewWithFrame:(CGRect)frame
 {
     _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
@@ -114,6 +121,7 @@
     
     [self addSubview:_tableView];
 }
+
 
 
 #pragma mark - 将数组的数据封装进property
@@ -176,6 +184,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.autoDeselected) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
     if (self.tableViewListDelegate && [self.tableViewListDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
         [self.tableViewListDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
