@@ -20,6 +20,12 @@
 		7C44911F1DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4491181DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@2x.png */; };
 		7C4491201DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4491191DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@3x.png */; };
 		7C44912E1DAB44CB00BEBEF4 /* JXYImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C44912D1DAB44CB00BEBEF4 /* JXYImageButton.m */; };
+		7C5B0B801DAF374600191E39 /* JXYPingServicesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B0B7F1DAF374600191E39 /* JXYPingServicesView.m */; };
+		7C5B0B861DAF6A7800191E39 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B0B851DAF6A7800191E39 /* SimplePing.m */; };
+		7CD5AF8A1DACB47C0016D195 /* STSimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5AF851DACB47C0016D195 /* STSimplePing.m */; };
+		7CD5AF8B1DACB47C0016D195 /* STDebugFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5AF871DACB47C0016D195 /* STDebugFoundation.m */; };
+		7CD5AF8C1DACB47C0016D195 /* STDPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5AF891DACB47C0016D195 /* STDPingServices.m */; };
+		7CD5AF911DACD26E0016D195 /* JXYPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5AF901DACD26E0016D195 /* JXYPingServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,18 @@
 		7C4491191DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ucenter_account_balance_right_arrow@3x.png"; sourceTree = "<group>"; };
 		7C44912C1DAB44CB00BEBEF4 /* JXYImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXYImageButton.h; sourceTree = "<group>"; };
 		7C44912D1DAB44CB00BEBEF4 /* JXYImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXYImageButton.m; sourceTree = "<group>"; };
+		7C5B0B7E1DAF374600191E39 /* JXYPingServicesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXYPingServicesView.h; sourceTree = "<group>"; };
+		7C5B0B7F1DAF374600191E39 /* JXYPingServicesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXYPingServicesView.m; sourceTree = "<group>"; };
+		7C5B0B841DAF6A7800191E39 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		7C5B0B851DAF6A7800191E39 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		7CD5AF841DACB47C0016D195 /* STSimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSimplePing.h; sourceTree = "<group>"; };
+		7CD5AF851DACB47C0016D195 /* STSimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSimplePing.m; sourceTree = "<group>"; };
+		7CD5AF861DACB47C0016D195 /* STDebugFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDebugFoundation.h; sourceTree = "<group>"; };
+		7CD5AF871DACB47C0016D195 /* STDebugFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDebugFoundation.m; sourceTree = "<group>"; };
+		7CD5AF881DACB47C0016D195 /* STDPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPingServices.h; sourceTree = "<group>"; };
+		7CD5AF891DACB47C0016D195 /* STDPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPingServices.m; sourceTree = "<group>"; };
+		7CD5AF8F1DACD26E0016D195 /* JXYPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXYPingServices.h; path = ../PingTool/JXYPingServices.h; sourceTree = "<group>"; };
+		7CD5AF901DACD26E0016D195 /* JXYPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXYPingServices.m; path = ../PingTool/JXYPingServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +134,8 @@
 				7C4490DC1DAB2CBD00BEBEF4 /* AppDelegate.m */,
 				7C4490DE1DAB2CBD00BEBEF4 /* ViewController.h */,
 				7C4490DF1DAB2CBD00BEBEF4 /* ViewController.m */,
+				7C5B0B831DAF6A7800191E39 /* Common */,
+				7CD5AF821DACB47C0016D195 /* PingTool */,
 				7C44912B1DAB44CB00BEBEF4 /* JXYImageButton */,
 				7C44910E1DAB3E4E00BEBEF4 /* image */,
 				7C4490E11DAB2CBD00BEBEF4 /* Main.storyboard */,
@@ -171,6 +191,40 @@
 				7C44912D1DAB44CB00BEBEF4 /* JXYImageButton.m */,
 			);
 			path = JXYImageButton;
+			sourceTree = "<group>";
+		};
+		7C5B0B831DAF6A7800191E39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7C5B0B841DAF6A7800191E39 /* SimplePing.h */,
+				7C5B0B851DAF6A7800191E39 /* SimplePing.m */,
+				7CD5AF8F1DACD26E0016D195 /* JXYPingServices.h */,
+				7CD5AF901DACD26E0016D195 /* JXYPingServices.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7CD5AF821DACB47C0016D195 /* PingTool */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5AF831DACB47C0016D195 /* PingTester */,
+				7CD5AF861DACB47C0016D195 /* STDebugFoundation.h */,
+				7CD5AF871DACB47C0016D195 /* STDebugFoundation.m */,
+				7CD5AF881DACB47C0016D195 /* STDPingServices.h */,
+				7CD5AF891DACB47C0016D195 /* STDPingServices.m */,
+				7C5B0B7E1DAF374600191E39 /* JXYPingServicesView.h */,
+				7C5B0B7F1DAF374600191E39 /* JXYPingServicesView.m */,
+			);
+			path = PingTool;
+			sourceTree = "<group>";
+		};
+		7CD5AF831DACB47C0016D195 /* PingTester */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5AF841DACB47C0016D195 /* STSimplePing.h */,
+				7CD5AF851DACB47C0016D195 /* STSimplePing.m */,
+			);
+			path = PingTester;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,10 +364,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD5AF8A1DACB47C0016D195 /* STSimplePing.m in Sources */,
+				7CD5AF911DACD26E0016D195 /* JXYPingServices.m in Sources */,
+				7CD5AF8C1DACB47C0016D195 /* STDPingServices.m in Sources */,
+				7C5B0B861DAF6A7800191E39 /* SimplePing.m in Sources */,
 				7C44912E1DAB44CB00BEBEF4 /* JXYImageButton.m in Sources */,
 				7C4490E01DAB2CBD00BEBEF4 /* ViewController.m in Sources */,
 				7C4490DD1DAB2CBD00BEBEF4 /* AppDelegate.m in Sources */,
+				7CD5AF8B1DACB47C0016D195 /* STDebugFoundation.m in Sources */,
 				7C4490DA1DAB2CBD00BEBEF4 /* main.m in Sources */,
+				7C5B0B801DAF374600191E39 /* JXYPingServicesView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +603,7 @@
 				7C4491041DAB2CBD00BEBEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C4491051DAB2CBD00BEBEF4 /* Build configuration list for PBXNativeTarget "ImageButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +612,7 @@
 				7C4491071DAB2CBD00BEBEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C4491081DAB2CBD00BEBEF4 /* Build configuration list for PBXNativeTarget "ImageButtonUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +621,7 @@
 				7C44910A1DAB2CBD00BEBEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

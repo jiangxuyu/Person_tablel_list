@@ -72,8 +72,7 @@
             imgWidth = _imgSize.width;
         }
             break;
-            
-            
+
         case ButtonStyleForLeftImgRightTitle:
         {
             imgX = (contentRect.size.width - _imgSize.width - _titleSize.width - _spaceBetweenImgAndTitle) / 2;
