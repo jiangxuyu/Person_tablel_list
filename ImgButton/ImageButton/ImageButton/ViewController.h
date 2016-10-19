@@ -7,18 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JXYPingServices.h"
-#import "STSimplePing.h"
-#import "SimplePing.h"
 
 
-@interface ViewController : UIViewController<JXYPingServicesDelegate, STSimplePingDelegate, SimplePingDelegate>
 
-@property(nonatomic, strong) STSimplePing *simplePing;
-
-@property(nonatomic, strong) SimplePing *pinger;
-@property(nonatomic, strong) SimplePing *pingerBaidu;
-
+@interface ViewController : UIViewController<UIWebViewDelegate>
 
 
 @end

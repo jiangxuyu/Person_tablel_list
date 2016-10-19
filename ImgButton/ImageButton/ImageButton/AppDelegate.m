@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <JSPatchPlatform/JSPatch.h>
 
 @interface AppDelegate ()
 
@@ -16,8 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //本地测试时调用
+//    [JSPatch testScriptInBundle];
+    
+    //上线后调用下面两个方法
+    [JSPatch startWithAppKey:@"d618d612a6b6e94c"];
+    [JSPatch sync];
+    
     return YES;
+}
+
++ (void)setupCallback:(void (^)(JPCallbackType type, NSDictionary *data, NSError *error))callback{
+    
 }
 
 
