@@ -17,6 +17,12 @@ typedef enum {
     ButtonStyleForRightImgLeftTitle           //左字右图
 }ButtonStyle;                          
 
-- (instancetype)initButtonWithFrame:(CGRect)frame withImage:(UIImage *)image withTitle:(NSString *)title withTitleTextFont:(UIFont *)font withTitleColor:(UIColor *)color withSpaceBetweenImgAndTitle:(CGFloat)distance withButtonStyle:(ButtonStyle)buttonStyle;
+- (instancetype)initButtonWithFrame:(CGRect)frame
+                          withImage:(UIImage *)image
+                          withTitle:(NSString *)title
+                  withTitleTextFont:(UIFont *)font
+                     withTitleColor:(UIColor *)color
+        withSpaceBetweenImgAndTitle:(CGFloat)distance
+                    withButtonStyle:(ButtonStyle)buttonStyle;
 
 @end

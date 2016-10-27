@@ -20,7 +20,14 @@
     CGSize _titleSize;
 }
 
-- (instancetype)initButtonWithFrame:(CGRect)frame withImage:(UIImage *)image withTitle:(NSString *)title withTitleTextFont:(UIFont *)font withTitleColor:(UIColor *)color withSpaceBetweenImgAndTitle:(CGFloat)distance withButtonStyle:(ButtonStyle)buttonStyle{
+- (instancetype)initButtonWithFrame:(CGRect)frame
+                          withImage:(UIImage *)image
+                          withTitle:(NSString *)title
+                  withTitleTextFont:(UIFont *)font
+                     withTitleColor:(UIColor *)color
+        withSpaceBetweenImgAndTitle:(CGFloat)distance
+                    withButtonStyle:(ButtonStyle)buttonStyle
+{
     self = [super initWithFrame:frame];
     if (self) {
         _btnImage = image;
@@ -156,6 +163,7 @@
     titleRect = CGRectMake(titleX, titleY, titleWidth, titleHeight);
     return titleRect;
 }
+
 
 
 @end
