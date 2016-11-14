@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>签签</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    
+    <link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css" />
+    <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.min.css" />
+    <link rel="stylesheet" href="dist/css/mobile-angular-ui-desktop.min.css" />
+    <script src="dist/js/angular.min.js"></script>
+    <script src="dist/js/angular-route.min.js"></script>
+    <script src="dist/js/mobile-angular-ui.min.js"></script>
+    <script src="dist/js/jquery-1.4.2.min.js"></script>
+    <script src="dist/js/mobile-angular-ui.gestures.min.js"></script>
+    	   
+    
+    <link rel="stylesheet" href="MsspClient.css" />
+    <script src="MsspClient.js"></script>
+ 
+  <style type="text/css">
+      .justified a.btn,.justified a.btn:hover{color:#959597;}
+      .justified a.btn.on,.justified a.btn.on:hover{color:#00aaee;}
+    	i.icon-index{width:21px;height:21px;display: block; margin:0 auto; background-image:url(image/icon.png);background-size:100%;}
+ 		  a.on i.icon-index{background-image:url(image/icon-on.png);}
+    	i.icon-index.list{background-position-y:62px;}
+    	i.icon-index.home{background-position-y:22px;}
+      .foottext{font-size: 12px;display: block;padding-top: 0px;margin-top: -5px;}      
+      .app{box-shadow: none !important;background-color: #fff !important;}
+      .navbar-app{border:0 none;}
+      .loading-back{background:lightgrey;border-color: none;font-size: 1.4rem;width: 100%;height: 100%;}
+      .loading-logo{margin-top: 50%;width:8em;}
+      .infocon{padding: 20px 0 0;margin: 0 auto;text-align: center;}
+      .loading-div{background:lightgrey;margin-top: 50%;text-align: center;position: absolute;top:10px;left:50%;width: 100px;margin-left: -50px;}
+      .list-group-item{border: 0px;}
+ </style>   
+ 
+    </head>
+
+
+
+  <body  ng-app="MobileAngularUiExamples"  ng-controller="MainController" >
+<!--
+	<style>
+.circle_jianbian{
+	position:fixed;
+	top:0px;
+	left:0px;	
+	width:100%; height:100%;
+	background-image: -webkit-radial-gradient(circle at center, rgb(255, 255, 255),rgb(0, 0, 0));
+	background-image: radial-gradient(circle at center, rgb(255, 255, 255),rgb(0, 0, 0));
+	opacity:0.8;
+	z-index: 99998;
+}
+</style>
+<div class="circle_jianbian"></div>
+-->
+
+
+   <!-- Sidebars -->
+    <div ng-include="'sidebar.html'" 
+            ui-track-as-search-param='true'
+            class="sidebar sidebar-left"></div>
+
+    <div ng-include="'sidebarRight.html'" 
+            class="sidebar sidebar-right"></div>
+
+    <div class="app" ng-swipe-right='Ui.turnOn("uiSidebarLeft")' ng-swipe-left='Ui.turnOff("uiSidebarLeft")'>
+
+      <!-- Navbars -->
+      <!-- Navbars -->
+       <div class="navbar navbar-app navbar-absolute-top" style="background:#e51c23; font-family: '微软雅黑';" ng-if="!navHideTop">
+     
+         <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+        
+        </div>
+        
+       <div class="btn-group pull-left" ui-yield-to="navbarActionleft" >
+        <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle" style="color:white">
+        </div>
+        </div>
+
+        <div class="btn-group pull-right" ui-yield-to="navbarAction" >
+          <div ui-toggle="uiSidebarRight" class="btn" style="color:white">
+           </div>
+        </div>
+        
+      </div>
+
+
+      <!--div class="navbar navbar-app navbar-absolute-bottom" style="background:#fff;padding-top:8px;" ng-if="!navHideBottom">
+        <div class="btn-group justified" ui-yield-to="navbarBottomAction" ng-if="!menuHide" >
+          <a ng-click="home_Ini()" class="btn btn-navbar on"><i class="icon-index home"></i><span class="foottext">首页</span></a>
+          <a ng-click="scroll_Ini(0)" class="btn btn-navbar"><i class="icon-index list"></i><span class="foottext">文档</span></a>
+          <a ng-click="usersetting_Ini()" class="btn btn-navbar"><i class="icon-index set"></i><span class="foottext">设置</span></a>
+        </div>
+      </div-->
+
+      
+      <!-- App Body -->
+      <div class="app-body" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading">
+       	 	<div class="loading-back"><img class="loading-logo" src="image/logo_2.png"></div>
+          <!--i class="fa fa-spinner fa-spin loading-spinner"></i-->
+          <!--div class="infocon">      
+          <div class="loading-div">
+          <img id='signImg' src='image/wait.gif' style="width:100px;height:100px;display: block;"/>
+            <p style="margin-top: -70px;color:#01aaef;font-size:30px;font-weight: bold;">签</p>
+          </div>
+          </div-->
+          </div>
+        <div  id="app-content"  class="app-content"  >
+          <ng-view>
+                   
+         </ng-view>
+        </div>
+      </div>
+
+    </div><!-- ~ .app -->
+
+    <div ui-yield-to="modals"></div>
+   
+  </body>
+</html>

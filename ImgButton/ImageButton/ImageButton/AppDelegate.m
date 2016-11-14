@@ -20,11 +20,11 @@
     //本地测试时调用
 //    [JSPatch testScriptInBundle];
     
-    //上线后调用下面两个方法
-    [JSPatch startWithAppKey:@"d618d612a6b6e94c"];
-    [JSPatch setupHttps];
-    [JSPatch sync];
-    
+//    //上线后调用下面两个方法
+//    [JSPatch startWithAppKey:@"d618d612a6b6e94c"];
+//    [JSPatch setupHttps];
+//    [JSPatch sync];
+//    
     return YES;
 }
 

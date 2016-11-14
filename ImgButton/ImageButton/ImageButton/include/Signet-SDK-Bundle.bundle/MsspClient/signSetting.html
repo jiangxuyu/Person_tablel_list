@@ -1,0 +1,54 @@
+﻿<meta charset="utf-8"> 
+
+<style type="text/css">
+    .fl{float: left;}
+    .fr{float: right;}
+    .complete{width: 10%;color: #606060; text-align: right;}
+    .btn-group, .btn-group-vertical{margin-top:11px;}
+    .btn{font-size: 18px;}
+</style>
+
+
+<div data-ng-init="signsetting_Ini()" >  </div>  
+
+<div ui-content-for="title">
+  <span style="color:#606060; display: inline-block; padding-left: 10%; width: 90%; float: left; text-align: center;">绘制签名</span>
+
+    <a class="complete fr pull-right fanghui"  href="Javascript:child.window.save();"> 
+           保存
+   </a> 
+    
+</div>
+
+<div class="btn-group pull-right" ui-content-for="navbarActionleft">         
+            <a id="fh_a" class="btn sidebar-toggle fanghui"  href="Javascript:signSettingBack()"> 
+            	取消
+            </a>        
+</div>
+
+
+<div class="btn-group pull-right" ui-content-for="navbarBottomAction">
+         
+            <a  class="btn btn-navbar"   href="Javascript:child.window.returnback();" style="color:white"> 
+            	<i  class="fa fa-chevron-left fa-navbar"> </i> 返回
+            </a>
+            
+            <a  class="btn btn-navbar"  href="Javascript:child.window.clean();" style="color:white"> 
+            	<i  class="fa fa-eraser fa-navbar"> </i> 清空
+            </a>
+            
+             <a  class="btn btn-navbar"  href="Javascript:child.window.save();" style="color:white"> 
+            	<i  class="fa fa-save fa-navbar"> </i> 保存
+            </a>
+       
+ </div>
+ 
+   
+            
+ <div class="scrollable" ui-turn-off='uiSidebarRight'  style="background:#F0F0F0;">
+ <iframe src="draw.html" name="child" width="100%" height="100%" scrolling="yes" style="border:0 none;"/>
+ </div>
+
+
+
+ 

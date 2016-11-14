@@ -20,6 +20,7 @@
 		7C44911F1DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4491181DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@2x.png */; };
 		7C4491201DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4491191DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@3x.png */; };
 		7C44912E1DAB44CB00BEBEF4 /* JXYImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C44912D1DAB44CB00BEBEF4 /* JXYImageButton.m */; };
+		7C5BF22D1DD59311009B9C64 /* MyPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BF22C1DD59311009B9C64 /* MyPickView.m */; };
 		7CFB278D1DB620F400DAF881 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFB278C1DB620F400DAF881 /* JSPatchPlatform.framework */; };
 		7CFB27901DB6214C00DAF881 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFB278F1DB6214C00DAF881 /* JavaScriptCore.framework */; };
 		7CFB27931DB6256100DAF881 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFB27921DB6256100DAF881 /* libz.1.2.5.tbd */; };
@@ -65,6 +66,8 @@
 		7C4491191DAB3E4E00BEBEF4 /* ucenter_account_balance_right_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ucenter_account_balance_right_arrow@3x.png"; sourceTree = "<group>"; };
 		7C44912C1DAB44CB00BEBEF4 /* JXYImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXYImageButton.h; sourceTree = "<group>"; };
 		7C44912D1DAB44CB00BEBEF4 /* JXYImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXYImageButton.m; sourceTree = "<group>"; };
+		7C5BF22B1DD59311009B9C64 /* MyPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickView.h; sourceTree = "<group>"; };
+		7C5BF22C1DD59311009B9C64 /* MyPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickView.m; sourceTree = "<group>"; };
 		7CFB278C1DB620F400DAF881 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		7CFB278F1DB6214C00DAF881 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		7CFB27911DB6220700DAF881 /* ImageButton.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageButton.entitlements; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 				7C4490DC1DAB2CBD00BEBEF4 /* AppDelegate.m */,
 				7C4490DE1DAB2CBD00BEBEF4 /* ViewController.h */,
 				7C4490DF1DAB2CBD00BEBEF4 /* ViewController.m */,
+				7C5BF22A1DD592BD009B9C64 /* JXYPickView */,
 				7C44912B1DAB44CB00BEBEF4 /* JXYImageButton */,
 				7C44910E1DAB3E4E00BEBEF4 /* image */,
 				7C4490E11DAB2CBD00BEBEF4 /* Main.storyboard */,
@@ -184,6 +188,15 @@
 				7C44912D1DAB44CB00BEBEF4 /* JXYImageButton.m */,
 			);
 			path = JXYImageButton;
+			sourceTree = "<group>";
+		};
+		7C5BF22A1DD592BD009B9C64 /* JXYPickView */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BF22B1DD59311009B9C64 /* MyPickView.h */,
+				7C5BF22C1DD59311009B9C64 /* MyPickView.m */,
+			);
+			name = JXYPickView;
 			sourceTree = "<group>";
 		};
 		7CFB278E1DB6214C00DAF881 /* Frameworks */ = {
@@ -342,6 +355,7 @@
 				7C4490E01DAB2CBD00BEBEF4 /* ViewController.m in Sources */,
 				7C4490DD1DAB2CBD00BEBEF4 /* AppDelegate.m in Sources */,
 				7C4490DA1DAB2CBD00BEBEF4 /* main.m in Sources */,
+				7C5BF22D1DD59311009B9C64 /* MyPickView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

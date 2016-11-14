@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+ 
+<head>
+	
+	<title>手写签名</title>
+	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="dist/css/draw.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css" />
+  <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.min.css" />
+  <link rel="stylesheet" href="dist/css/mobile-angular-ui-desktop.min.css" />
+ <script type="text/javascript" src="dist/js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="dist/js/draw.js"></script>
+    <script type="text/javascript">
+        $(function(){
+          $(".btncon .op").click(function(){
+            
+            $(this).addClass("on").siblings().removeClass("on");
+            
+          });
+          $(".colcon .colspan").click(function(){
+            
+            $(this).addClass("on").siblings().removeClass("on");
+            
+          });
+        });
+   </script>
+        
+ <style>
+  .tabletd td{height: 28px;line-height: 28px;vertical-align: middle;}
+  .op{box-sizing: content-box;display: inline-block;}  
+  .btncon .op,.btncon .op input{width:30px;height:30px;border: 0 none;margin: 0 8px; position: relative;z-index: 0;} 
+  .btncon .op input[type="radio"]{display: inline-block;opacity: 0.01;background: transparent;}
+  /*.btncon .op input[type="radio"]:focus:after{border-radius: 2px;border:1px solid #98989a;padding: 10px;background: rgba(0,0,0,0.9);content: "";width: 28px;height: 28px;position: absolute;top: -4px;left: -6px;z-index: 0;} */
+  /*.btncon .pen1{background: url(image/pen1.png) no-repeat center center;background-size: 20px 20px;}*/
+  /*.btncon .pen2{background: url(image/pen2.png) no-repeat center center;background-size: 20px 20px;margin-right: 10px !important;}*/
+  .btncon .dele{background: url(image/1-38.png) no-repeat center center;background-size: 30px 30px; outline: none; margin-top: -2px;}
+  .borleft{border-left: 1px solid #EFF0EF;display: inline-block;width: 0;height: 25px; float: left;}
+  .btncon .save{background:#f0eff5 url(image/signed.png) no-repeat center center;background-size: 30px 30px;margin-left: 0px;}
+  .btncon .pen1{float:left;background: url(image/n1-4.png) no-repeat 0 0;background-size: 30px 30px;margin-right: 5px !important;}
+  .btncon .pen2{float:left;background: url(image/n1-3.png) no-repeat 0 0;background-size: 30px 30px;margin-right: 5px !important;}
+  .btncon .pen1.on{background: url(image/n1-1.png) no-repeat 0 0;background-size: 30px 30px;}
+  .btncon .pen2.on{background: url(image/n1-2.png) no-repeat 0 0;background-size: 30px 30px;}
+  .colcon .colspan{display: inline-block;margin-left: 10px;width: 22px;height: 22px;}
+  .colcon .colspan .btncol{display: inline-block;width: 22px;height: 22px;border: 0 none; opacity:0.1;}
+  .colcon .colspan.i2{background: url(image/btnred.png) no-repeat center center;background-size: 22px 22px;margin-left: 10px !important;}
+  .colcon .colspan.i3{background: url(image/btnblue.png) no-repeat center center;background-size: 22px 22px;margin-left: 10px !important;}
+  .colcon .colspan.i2.on{background: url(image/btnred2.png) no-repeat center center;background-size: 22px 22px;}
+  .colcon .colspan.i3.on{background: url(image/btnblue2.png) no-repeat center center;background-size: 22px 22px;}
+ .media>.pull-left{margin-right:0px ;}
+ 
+.paizhao01,.paizhao02{float: left; display: inline-block;}
+.paizhao02{padding:2px 0 0 10px;}
+ </style>
+</head>
+
+<body style="background:#fff;">
+
+    <div id="work_area" class="editing_area pull-left" >
+       <canvas  id="myCanvas" style="width:100%;height:100%;"></canvas>
+       <img id='signImg' style="width:100%;height:100%;" src='image/write.png'/>
+     </div>
+    
+     <!--div class="list-group-item media" style="height:15%;background:#f0eff5;border-style:none;border-top:1px solid #98979d; display:block"-->
+      <div class="list-group-item media" style="background:#fff;border-style:none;border-top:2px dashed #EFF0EF; display:block;padding: 10px 0 10px 15px;position: absolute;bottom: 0px;left: 2%;width:96%;">          
+          <a style="display:block;">
+         	<div class="tabletd" style="width:25%;text-aglin:right; float: right;">         
+	         	<div class="colcon" id="input_button">
+		             <span class="colspan i2 on"><input class="btncol" type="button" id="setRed" checked="checked" /></span>
+		             <span class="colspan i3"><input class="btncol" type="button" id="setBlue" /></span>
+	           	</div>
+			</div>
+         
+          	<div style="float: left; width:50%;">
+          		<div class="pull-left btncon">
+		            <span class="op pen1 on"><input type="radio" id="middle" checked="checked" /></span>
+		            <span class="op pen2"><input type="radio" id="fat" /></span>
+		            <i class="borleft"></i>
+	          	</div>
+	          	<div class="pull-left btncon">
+		            <button class="op dele" id="refresh"></button> 
+		            <button class="op save" id="save" style="display:none;"></button>           	 
+		        </div>          		
+          	</div>
+           	
+	      </a> 
+      </div>
+   
+</body>
+
+</html>

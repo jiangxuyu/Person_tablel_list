@@ -1,0 +1,372 @@
+<meta charset="utf-8"> 
+
+
+<style type="text/css">
+
+.section,.form-group{padding:0;}
+.login-box,.list-group{background:#fff;padding:0 0 0 10px;}
+.login-box{margin:0px 0 100px;}
+.input-control.pull-right{margin-left:10px;border: none;box-shadow: none;margin-top:10px;border-left:0px;border-top:0px;border-right:0px;border-bottom:1px;}
+.form-control.pull-right{border: none;box-shadow: none;margin-top:4px;}
+.list-group-item-home {padding: 10px 0;}
+.btn-primary{width:80%; margin:0 auto;padding:8px 0;background:#e51c23; border:0px;}
+.text-1{color:#98989B;font-size:14px;margin:4px 0;padding-left:20px;}
+.noAb a{border-bottom:1px solid #f0f0f0;}
+.noAb a:last-child{border-bottom:none;}
+a.toR{background:url(image/yes.png) no-repeat 94% center;background-size: 18px 14px; }
+.btn{font-size: 18px;}
+.btn-group, .btn-group-vertical {margin-top: 11px;}
+small.changecard{display: none; padding: 0.375em 0.25em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-left: 6em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: white;
+  color: darkgrey;}
+label{font-weight: normal;}
+</style>
+ 
+
+<div ui-content-for="title">
+  <span style="color:#fff; ">证书找回</span>
+</div>
+<div class="btn-group pull-right" ui-content-for="navbarActionleft">
+         
+            <a id="fh_a" class="btn sidebar-toggle fanghui"  href="Javascript:signSettingBack()"> 
+            	<i  class="fa fa-chevron-left"> </i>
+            </a> 
+        
+</div>
+<div class="scrollable" data-ng-init="olduser_Ini()">
+	
+
+
+
+ <div class="scrollable-content section" style="background:#f5f0f5;">
+   
+  <form name="form" novalidate>
+  
+     <fieldset>  
+     	      
+     <div class="clear" style="width: 24%; margin: 20px 0 20px 1%; font-size: 15px; color: #999;"><img src="image/ywqlogo.png" style="width: 7.5rem;"></div>
+      <div id="userCheck" ng-show="!olduser_UserCheck">
+      	
+       <div class="login-box">   
+       	
+       <div class="form-group has-success has-feedback" style="border-bottom:1px solid #f0f0f0; ">
+              	
+      
+       	 <label class="list-group-item-home">您的姓名</label>
+        
+         <input  class="input-control pull-right"  style="width:70%;margin-left: 5px;"
+                 type="text"
+                 name="name" 
+                 id="name"
+                 value=""
+                 maxlength="16"
+				 autocomplete="off"
+                 oninput="name_id_change()"
+                 ng-model="user.name"
+                 ng-minlength=2 
+                 ng-maxlength=16 required 
+                 placeholder="输入您的真实姓名"/>
+                 
+        <div class="error" style="margin-left:10px;" ng-show="form.name.$dirty && form.name.$invalid">
+        <small class="error" 
+            ng-show="form.name.$error.required">
+            请先填写姓名
+        </small>
+        <small class="error" 
+                ng-show="form.name.$error.minlength"> 
+                您的姓名长度应大于两个字
+        </small>
+        <small class="error" 
+                ng-show="form.name.$error.maxlength">
+               您的姓名长度应小于十六个字
+        </small>
+        
+        
+      
+      </div>
+      
+       </div>
+     
+         
+        <div class="form-group has-success has-feedback" style="border-bottom:1px solid #f0f0f0; ">
+        	
+        	<label class="list-group-item-home">您的证件</label>
+        	 
+           <input  class="input-control pull-right"  style="width:70%;margin-left: 5px;"
+                   type="text"
+                   name="paperid" 
+                   id="paperid"
+                   maxlength="18"
+                   value=""
+				   autocomplete="off" 
+				   oninput="ywq_id_change()"
+                   ng-model="user.paperid"
+                   user-validator="user.paperid" required
+                   placeholder="输入您的证件号码"/>
+                   
+        <div class="error" style="margin-left:10px;"
+            ng-show="form.paperid.$dirty && form.paperid.$invalid">
+            
+            
+        <small class="error"  
+            ng-show="form.paperid.$error.required">
+            请先填写证件号码
+        </small>
+        
+         <small id="idcard" class="changecard"> 
+                请输入的证件18位有效身份证号码
+        </small>
+        
+        <small id="id_password" class="changecard"> 
+                请输入正确的护照号码
+        </small>
+        
+        <small id="id_officer" class="changecard"> 
+                请输入正确的军官证号码
+        </small>
+      
+       </div>
+                   
+                   
+                   
+        </div>
+        
+        
+  </div>  
+         <button class="btn btn-primary btn-block"  ng-disabled="!(card_panduan&&form.name.$valid)"
+         	ng-click="oldUserCheckUser(form.name.$valid && 
+         	                           form.paperid.$valid,user)" >
+               下一步
+         </button>
+      </div>
+      
+      
+         
+      <div id="userphonelist" ng-show="olduser_userMobile">
+      	
+      	<label class="list-group-item-home text-1">选择您用于验证的手机号码</label>
+           	 
+      	<div class="list-group noAb" style="border-bottom:1px solid #f0f0f0; ">
+    	
+         <a class="list-group-item media"  
+         	ng-repeat="user in olduser_UserPhoneList" 
+         	data-ng-init="olduser_checkIni()">
+    
+         <div class="media-body" >
+            <span style="color:#0080FF"> {{user.phone}} </span> 
+            <input id="{{user.phone}}" type="radio"  ng-click="oldUserSelectNum(user.phone)"/>  
+         </div>
+                     
+          </a>
+        </div>
+                
+        
+      </div>
+      
+       <div id="old|New" ng-show="olduser_userMobile">
+      	
+          		
+    <div ng-show="temphide">
+           <label class="list-group-item-home">使用原手机号</label>
+           <input type="radio" id="oldnumber" ng-click="oldUserOldNumber()" >
+		   
+		   
+           <label> &nbsp&nbsp&nbsp </label>
+           <label>使用新手机号</label>
+           <input type="radio" id="newnumber" ng-click="oldUserNewNumber()">
+          
+                
+    </div>     
+             
+        
+       </div>
+      
+      
+      <div ng-show="olduser_userMobile"> 
+      <a class="list-group-item media " align="center" style="background:white;border-style:none;"  >
+     	
+      <button class="btn btn-primary btn-block" ng-click="checkValid()">
+      下一步
+      </button>
+    
+     </a>
+      </div>
+         
+    
+      <div id="checkValid" ng-show="olduser_checkValid">
+        	
+      
+      <div id="validType" ng-show="olduser_validType">
+      	
+        
+           <div class="form-group has-success has-feedback"  >
+           <label class="list-group-item-home">安全验证方式</label>
+           	
+           <label >原签名口令</label>
+           <input type="radio" id="oldPinVerify" ng-click="oldPinVerify()" >
+           <label> &nbsp&nbsp&nbsp</label>
+           <label>原手机短信 </label>
+           <input type="radio" id="oldNumberOtpVerify" ng-click="oldNumberOtpVerify()">
+           
+           </div>
+      
+      </div>
+   
+      <div id="userOldOTP" ng-show="olduser_oldotp">
+      	
+      	 <div class="form-group has-success has-feedback"  >
+          <!--label class="list-group-item-home">发送验证码</label-->
+          
+          
+           <input  class="form-control btn btn-primary"  
+                   type="button" 
+                   value={{oldUser_msg}}
+                   ng-disabled="oldUser_isDisabled" 
+                   ng-click="oldUser_sendmsg()"/>
+     	    	 
+        </div>
+        
+        <div class="form-group has-success has-feedback"  >
+         	         
+        
+         <!--label class="list-group-item-home">短信验证码pull-right"  style="width:70%;</label-->
+          <input type="tel"
+                 ng-model="user.otp"
+                 id="otp"
+                 name="otp" 
+                 class="form-control "
+				 autocomplete="off"
+                 placeholder="输入您收到的短信验证码"
+                 ng-minlength=6 ng-maxlength=6 required/>
+                
+          <div class="error" ng-show="form.otp.$dirty && form.otp.$invalid">
+          <small class="error" ng-show="form.otp.$error.required">
+            请先填写短信验证码
+         </small>
+        <small class="error" 
+                ng-show="form.otp.$error.minlength"> 
+                短信验证码长度不正确
+        </small>
+        <small class="error" 
+                ng-show="form.otp.$error.maxlength"> 
+                短信验证码长度不正确
+        </small>
+      
+          </div>
+               
+       </div>
+       
+      </div> 
+        
+      <div id="userOldPin" ng-show="olduser_oldPin">
+      
+     
+       <div class="form-group has-success has-feedback">
+       	
+       	 
+      
+       	 <!--label class="list-group-item-home">旧签名口令 pull-right"  style="width:70%;</label-->
+        
+         <input  class="form-control"
+                 type="password"
+                 name="oldpass" 
+                 id="oldpass"
+				 autocomplete="off"
+                 ng-model="user.oldpass"
+                 ng-minlength=6 
+                 ng-maxlength=20 required 
+                 placeholder="请输入您的旧签名口令"/>
+                 
+        <div class="error" 
+            ng-show="form.oldpass.$dirty && form.oldpass.$invalid">
+        <small class="error" 
+            ng-show="form.oldpass.$error.required">
+            请先填写旧签名口令
+        </small>
+        <small class="error" 
+                ng-show="form.oldpass.$error.minlength"> 
+                旧签名口令长度不能小于6个字符
+        </small>
+        <small class="error" 
+                ng-show="form.oldpass.$error.maxlength">
+               旧签名口令长度不能大于20个字符
+        </small>
+      </div>
+      
+       </div>
+      	
+      </div>      
+      
+      <div id="userNewPhone" ng-show="olduser_userNewPhone">
+           
+       <div class="form-group has-success has-feedback"  >
+         	
+         	<!--label class="list-group-item-home">新手机号码pull-right"  style="width:70%;</label-->
+                   
+          <input type="tel"
+                 ng-model="user.newephone"
+                 id="newephone"
+                 name="newephone" 
+                 class="form-control "
+				 autocomplete="off"
+                 placeholder="输入您的新手机号码"
+                 ng-minlength=11 ng-maxlength=11 required />
+                 
+        <div class="error" 
+            ng-show="form.newephone.$dirty && form.newephone.$invalid">
+        <small class="error" 
+            ng-show="form.newephone.$error.required">
+            请先填写手机号码
+        </small>
+        <small class="error" 
+                ng-show="form.newephone.$error.minlength"> 
+                您的手机号码长度不正确
+        </small>
+        <small class="error" 
+                ng-show="form.newephone.$error.maxlength"> 
+                您的手机号码长度不正确
+        </small>
+      
+      </div>
+               
+       </div>
+        
+      	
+      </div> 
+         
+    
+      <a class="list-group-item media" align="center" style="background:white;border-style:none;">
+      	
+      <!--button class="btn btn-primary btn-block " ng-click="checkValidBack()">
+       上一步
+      </button-->
+      
+     	<button class="btn btn-primary btn-block"	 ng-click="checkValid2(form.otp.$valid,
+     		                                                              form.oldpass.$valid,
+     		                                                              form.newephone.$valid,user)">
+       下一步
+      </button>
+      </a>
+    
+     
+      </div> 
+      
+      
+      
+         
+     </fieldset> 
+
+      <!--div  ng-show="Response">
+       
+            {{Response}}
+      
+      
+      </div-->
+  </form>
+ </div>
+</div>

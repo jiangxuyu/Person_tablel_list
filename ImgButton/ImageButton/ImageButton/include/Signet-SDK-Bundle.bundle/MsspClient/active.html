@@ -1,0 +1,185 @@
+﻿<meta charset="utf-8"> 
+
+<style type="text/css">
+	.send-num{padding:20px 0 5px 0;overflow:hidden; line-height:24px; position: relative;}
+	.ywqlogo{position: absolute; top: 20px; left:1%; width: 24.37%;}
+	
+	.send-num p{font-size:15px;text-align: center;color:#999; margin:0;}
+	.send-num p span{color:#0AF;}
+	.send-num p.f12{font-size: 12px;}
+	.send-num .bFontZ{font-size:15px;}
+	.receive-num{overflow:hidden;background:#fff;border:0px;padding:0 10px;}
+
+	.section,.form-group{padding:0;}
+	.login-box,.list-group{border:0px; background:#fff;padding:0 0 0 20px;}
+	.login-box{margin:20px 0 40px;}
+	.form-control.pull-right{border: none;box-shadow: none;margin-top:4px;}
+	.input-control.pull-right{border: none;box-shadow: none;margin-top:10px;border-left:0px;border-top:0px;border-right:0px;border-bottom:0px;}
+	.list-group-item-home {padding: 10px 0;}
+	.btn-primary{width:80%; margin:0 auto;padding:8px 0;background:#e51c23; border:0px;}
+	.text-1{color:#98989B;font-size:14px;margin:4px 0;padding-left:20px;}
+	.noAb a{border-bottom:1px solid #f0f0f0;}
+	
+	.btn-group, .btn-group-vertical{margin-top:11px;}
+    .btn{font-size: 18px;}
+    label{font-weight: normal;}
+    .f12{font-size: 12px;}
+    
+</style>
+
+
+<div ui-content-for="title">
+  <span style="color:#fff; ">用户激活</span>  
+</div>
+
+
+
+<div class="btn-group pull-right" ui-content-for="navbarActionleft">
+         
+            <a id="fh_a" class="btn sidebar-toggle fanghui"  href="Javascript:pageBack()"> 
+            	<i  class="fa fa-chevron-left"> </i>
+            </a> 
+        
+</div>
+
+<div class="scrollable">
+ <div class="scrollable-content section" style="background:#f5f0f5;">
+   
+  <form name="form" novalidate>
+    <fieldset>
+      
+        
+       <div id="userOldOTP" data-ng-init="active_Ini()">
+       	
+       		<div class="send-num">
+       			<div class="ywqlogo"><img src="image/ywqlogo.png" style="width: 7.5rem;"></div>
+  		    <p class="f12">已发送<span style="color:#e51c23">验证码</span>到您手机</p>
+  		    <p class="bFontZ">
+  		    	{{active_phone}}
+  		     <label   ng-click="active_sendmsg()"  style="color:#e51c23" >
+  		   	 {{active_msg}} 
+  		    </label>
+     	    </p>
+  	     </div>
+  
+   	    <div class="receive-num">   
+   		
+  	    <div class="form-group has-success has-feedback"  style="border-bottom:1px solid #f0f0f0; ">
+        
+        <label class="list-group-item-home " >验证码</label>
+                                  
+        <input class="input-control pull-right"   style="width:70%;"
+				 type="tel"  
+         name="otp" 
+				 id="otp" 
+				 maxlength="6"
+				 autocomplete="off" 
+				 ng-model="bindinfo.otpCode" 
+         placeholder="输入您收到的短信验证码"  />
+                
+          <div class="error" ng-show="form.otp.$dirty && form.otp.$invalid">
+          <small class="error" ng-show="form.otp.$error.required">
+            请先填写短信验证码
+          </small>
+          <small class="error" 
+                ng-show="form.otp.$error.minlength"> 
+                短信验证码长度不正确
+          </small>
+          <small class="error" 
+                ng-show="form.otp.$error.maxlength"> 
+                短信验证码长度不正确
+          </small>
+      
+         </div>
+               
+       </div>
+     
+        
+       <div class="form-group has-success has-feedback"  style="border-bottom:1px solid #f0f0f0; ">
+        	       
+     
+         <label class="list-group-item-home ">输入口令</label>
+         <input  class="input-control  pull-right"   style="width:70%;" 
+                 maxlength="6"
+                 type="password"  
+                 name="userpin1" 
+				 id="userpin1" 
+				 onfocus="this.type='password'"
+				 ng-model="bindinfo.userpin1" 
+				 autocomplete="off" 
+                 ng-minlength=6 
+                 ng-maxlength=6 required
+                 placeholder="请输入您的数字签名口令"/>
+                 
+      <div class="error" ng-show="form.userpin1.$dirty && form.userpin1.$invalid">
+        <small class="error" 
+            ng-show="form.userpin1.$error.required">
+            请先填写数字签名口令
+        </small>
+        <small class="error" 
+                ng-show="form.userpin1.$error.minlength"> 
+                请设置6位数字签名口令
+        </small>
+        <small class="error" 
+                ng-show="form.userpin1.$error.maxlength">
+               请设置6位数字签名口令
+        </small>
+      </div>
+      <!--签名口令长度不能大于20个字符 签名口令长度不能小于6个字符-->
+       </div>
+       
+       <div class="form-group has-success has-feedback" style="border-bottom:1px solid #f0f0f0; ">   
+          	
+         <label class="list-group-item-home ">确认口令</label>    
+         <input  class="input-control pull-right"   style="width:70%;"
+                 type="password"  
+                 maxlength="6"
+				         onfocus="this.type='password'"
+                 name="userpin2" 
+				 id="userpin2" 
+				 autocomplete="off" 
+				 ng-model="bindinfo.userpin2" 
+                 ng-minlength=6 
+                 ng-maxlength=6 required
+                 placeholder="请再次输入数字签名口令"/>
+                 
+        <div class="error" 
+            ng-show="form.userpin2.$dirty && form.userpin2.$invalid">
+        <small class="error" 
+            ng-show="form.userpin2.$error.required">
+            请先填写数字签名口令
+        </small>
+        <small class="error" 
+                ng-show="form.userpin2.$error.minlength"> 
+               请设置6位数字签名口令
+        </small>
+        <small class="error" 
+                ng-show="form.userpin2.$error.maxlength">
+               请设置6位数字签名口令
+        </small>
+      </div>
+      
+       </div>
+       
+        </div> 
+       
+      </div> 
+        
+        
+        
+    </fieldset>
+
+	<br><br><br>
+    <button class="btn btn-primary btn-block" ng-disabled="!(form.userpin1.$valid&& form.userpin2.$valid)" ng-click="activeuser(bindinfo)">
+      激活
+    </button>
+
+
+  </form>
+            
+ </div>
+   
+</div>
+
+
+
