@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "JXYImageButton.h"
 #import "MyPickView.h"
+#import "TableViewForTextField.h"
 
 
 @interface ViewController ()
@@ -16,6 +17,7 @@
     NSDate *_startDate;
     NSTimer *_timer;
     int _timesCount;
+    TableViewForTextField *_table;
     
     MyPickView *_pickView;
 }
@@ -30,16 +32,24 @@
     [button addTarget:self action:@selector(doSomething) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     _pickView = [[MyPickView alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, 40)];
+    _pickView.pickviewClick = ^(NSString *result){
+        NSLog(@"%@",result);
+    };
     _pickView.titleArray = @[@"1",@"2",@"3"];
     [self.view addSubview:_pickView];
     
+    _table = [[TableViewForTextField alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 120) withTitles:@[@"123",@"234"] withPlaceholders:@[@"123",@"234"]];
+    _table.textFieldClick = ^(NSString *inputText, NSInteger index){
+        NSLog(@"%@ ,index = %ld",inputText,index);
+    };
+    [self.view addSubview:_table];
     
 }
 
 
 - (void)doSomething
 {
-    NSLog(@"%@",_pickView.selectResult);
+    [_table setTitleArray:@[@"变了吧",@"吧"] withPlaceholderArray:@[@"吧",@"吧"]];
 }
 
 

@@ -11,6 +11,6 @@
 @interface MyPickView : UIView<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSArray *titleArray;
-@property (strong, nonatomic) NSString *selectResult;
+@property(copy,nonatomic) void(^pickviewClick)(NSString *result);
 
 @end
